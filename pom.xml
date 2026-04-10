@@ -6,7 +6,7 @@
 
     <groupId>com.technokratos.agona</groupId>
     <artifactId>live-airline-common-library</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <distributionManagement>
         <repository>
@@ -15,6 +15,14 @@
             <url>https://maven.pkg.github.com/ildarsafa5/live-airline-common-library</url>
         </repository>
     </distributionManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.5.9</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
