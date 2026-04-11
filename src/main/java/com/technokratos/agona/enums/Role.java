@@ -3,7 +3,8 @@ package com.technokratos.agona.enums;
 public enum Role {
     CLIENT(),
     ADMIN(),
-    SCHEDULER();
+    SCHEDULER(),
+    CABBIE()
 
 //    private final String[] authorities;
 //
