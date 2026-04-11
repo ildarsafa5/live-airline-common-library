@@ -11,8 +11,6 @@ public class ClientRequest {
     private String middleName;
     @JsonFormat(pattern = "dd.MM.yyyy")
     private LocalDate dateOfBirth;
-    private PassportRequest passport;
-    private TravelPassportRequest travelPassport;
 
     public String getLastName() {
         return lastName;
@@ -36,22 +34,6 @@ public class ClientRequest {
 
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-    }
-
-    public TravelPassportRequest getTravelPassport() {
-        return travelPassport;
-    }
-
-    public void setTravelPassport(TravelPassportRequest travelPassport) {
-        this.travelPassport = travelPassport;
-    }
-
-    public PassportRequest getPassport() {
-        return passport;
-    }
-
-    public void setPassport(PassportRequest passport) {
-        this.passport = passport;
     }
 
     public String getFirstName() {
