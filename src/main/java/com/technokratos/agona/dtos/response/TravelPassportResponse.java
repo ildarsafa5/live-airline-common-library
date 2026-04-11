@@ -10,11 +10,11 @@ public class TravelPassportResponse {
     private LocalDate dateOfIssue;
     private LocalDate dateOfExpiry;
 
-    public UUID gettPassportId() {
+    public UUID getTPassportId() {
         return tPassportId;
     }
 
-    public void settPassportId(UUID tPassportId) {
+    public void setTPassportId(UUID tPassportId) {
         this.tPassportId = tPassportId;
     }
 
