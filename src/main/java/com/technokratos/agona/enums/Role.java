@@ -14,7 +14,7 @@ public enum Role {
         this.authorities = authorities;
     }
 
-    List<String> authorities() {
+    public List<String> authorities() {
         return authorities;
     }
 }
