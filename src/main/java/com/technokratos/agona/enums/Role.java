@@ -1,18 +1,20 @@
 package com.technokratos.agona.enums;
 
-public enum Role {
-    CLIENT(),
-    ADMIN(),
-    SCHEDULER(),
-    CABBIE()
+import java.util.List;
 
-//    private final String[] authorities;
-//
-//    Role(String[] authorities) {
-//        this.authorities = authorities;
-//    }
-//
-//    String[] authorities() {
-//        return authorities;
-//    }
+public enum Role {
+    CLIENT(List.of("CLIENT")),
+    ADMIN(List.of("ADMIN")),
+    SCHEDULER(List.of("SCHEDULER")),
+    CABBIE(List.of("CABBIE"));
+
+    private final List<String> authorities;
+
+    Role(List<String> authorities) {
+        this.authorities = authorities;
+    }
+
+    List<String> authorities() {
+        return authorities;
+    }
 }
