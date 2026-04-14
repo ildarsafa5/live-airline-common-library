@@ -4,8 +4,10 @@ package com.technokratos.agona.dtos.request;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class ClientRequest {
+    private UUID accountId;
     private String lastName;
     private String firstName;
     private String middleName;
@@ -42,5 +44,13 @@ public class ClientRequest {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public UUID getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(UUID accountId) {
+        this.accountId = accountId;
     }
 }
