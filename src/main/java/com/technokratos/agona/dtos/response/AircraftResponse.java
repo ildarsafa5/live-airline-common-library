@@ -10,5 +10,6 @@ import java.util.UUID;
 public class AircraftResponse {
     private UUID id;
     private String model;
-    private Integer totalSeats;
+    private Integer economySeats;
+    private Integer businessSeats;
 }
