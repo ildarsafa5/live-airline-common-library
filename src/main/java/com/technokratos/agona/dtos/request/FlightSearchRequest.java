@@ -13,5 +13,5 @@ public class FlightSearchRequest {
     private String to;
     private LocalDate date;
     private SeatClass seatClass;
-    private Integer passenger;
+    private Integer passengers;
 }

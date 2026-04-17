@@ -20,5 +20,4 @@ public class FlightSearchResponse {
     private OffsetDateTime arrivalTime;
     private int durationMinutes;
     private BigDecimal price;
-    private int availableSeats;
 }
