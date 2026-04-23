@@ -6,11 +6,14 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.UUID;
+
 import java.time.LocalDate;
 
 
 public class ClientRequest {
     @NotNull
+    @UUID
     private String accountId;
     @NotBlank
     @Pattern(regexp = "^[А-ЯЁ][а-яё]*$", message = "Должно содержать только русские буквы, первая буква заглавная")
