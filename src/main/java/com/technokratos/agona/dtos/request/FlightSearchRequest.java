@@ -1,10 +1,7 @@
 package com.technokratos.agona.dtos.request;
 
 import com.technokratos.agona.enums.SeatClass;
-import jakarta.validation.constraints.FutureOrPresent;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,9 +12,11 @@ import java.time.LocalDate;
 public class FlightSearchRequest {
 
     @NotBlank
+    @Pattern(regexp = "^[A-Z]{3}$")
     private String from;
 
     @NotBlank
+    @Pattern(regexp = "^[A-Z]{3}$")
     private String to;
 
     @NotNull

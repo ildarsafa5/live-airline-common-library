@@ -1,9 +1,7 @@
 package com.technokratos.agona.dtos.request;
 
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.FutureOrPresent;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+
+import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
 
@@ -16,6 +14,7 @@ import java.util.UUID;
 public class FlightCreateRequest {
 
     @NotBlank
+    @Size(max = 10)
     private String flightNumber;
 
     @NotNull
