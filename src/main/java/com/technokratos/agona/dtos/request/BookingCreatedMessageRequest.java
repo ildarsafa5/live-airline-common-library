@@ -1,16 +1,16 @@
 package com.technokratos.agona.dtos.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 
 public class BookingCreatedMessageRequest extends EmailMessageRequest{
     private String flightNumber;
-    @JsonFormat(pattern = "dd.MM.yyyy")
-    private LocalDate departureDate;
-    @JsonFormat(pattern = "dd.MM.yyyy")
-    private LocalDate arrivalDate;
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
+    private LocalDateTime departureDate;
+    @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
+    private LocalDateTime arrivalDate;
     private String firstName;
     private String lastName;
     private String middleName;
@@ -32,19 +32,19 @@ public class BookingCreatedMessageRequest extends EmailMessageRequest{
         this.flightNumber = flightNumber;
     }
 
-    public LocalDate getDepartureDate() {
+    public LocalDateTime getDepartureDate() {
         return departureDate;
     }
 
-    public void setDepartureDate(LocalDate departureDate) {
+    public void setDepartureDate(LocalDateTime departureDate) {
         this.departureDate = departureDate;
     }
 
-    public LocalDate getArrivalDate() {
+    public LocalDateTime getArrivalDate() {
         return arrivalDate;
     }
 
-    public void setArrivalDate(LocalDate arrivalDate) {
+    public void setArrivalDate(LocalDateTime arrivalDate) {
         this.arrivalDate = arrivalDate;
     }
 
