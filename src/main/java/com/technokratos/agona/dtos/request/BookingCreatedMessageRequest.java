@@ -15,6 +15,15 @@ public class BookingCreatedMessageRequest extends EmailMessageRequest{
     private String lastName;
     private String middleName;
     private BigDecimal price;
+    private int numberOfTickets;
+
+    public int getNumberOfTickets() {
+        return numberOfTickets;
+    }
+
+    public void setNumberOfTickets(int numberOfTickets) {
+        this.numberOfTickets = numberOfTickets;
+    }
 
     public BigDecimal getPrice() {
         return price;
