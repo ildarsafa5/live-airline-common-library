@@ -9,8 +9,6 @@ public class FlightReminderMessageRequest extends EmailMessageRequest {
     private String flightNumber;
     @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
     private LocalDateTime departureDate;
-    @JsonFormat(pattern = "dd.MM.yyyy HH:mm")
-    private LocalDateTime arrivalDate;
     private String city;
     private String airportCode;
 
@@ -44,13 +42,5 @@ public class FlightReminderMessageRequest extends EmailMessageRequest {
 
     public void setDepartureDate(LocalDateTime departureDate) {
         this.departureDate = departureDate;
-    }
-
-    public LocalDateTime getArrivalDate() {
-        return arrivalDate;
-    }
-
-    public void setArrivalDate(LocalDateTime arrivalDate) {
-        this.arrivalDate = arrivalDate;
     }
 }
