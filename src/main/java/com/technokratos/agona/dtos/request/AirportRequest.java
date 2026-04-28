@@ -17,6 +17,11 @@ public class AirportRequest {
     private String city;
 
     @NotBlank
+    @Size(max = 100)
+    @Pattern(regexp = "^[A-Za-z\\s\\-']+$", message = "Название города на английском языке: только латинские буквы, пробелы, дефисы, апострофы")
+    private String cityEn;
+
+    @NotBlank
     @Size(max = 40)
     private String timezone;
 }
