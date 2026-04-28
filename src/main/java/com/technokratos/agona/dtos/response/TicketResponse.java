@@ -16,7 +16,7 @@ public class TicketResponse {
     private String flightNumber;
     private String firstName;
     private String lastName;
-    private String patronymic;
+    private String middleName;
     private String passport;
     private PassengerCategory passengerCategory;
     private SeatClass seatClass;

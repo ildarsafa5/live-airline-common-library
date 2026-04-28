@@ -17,6 +17,5 @@ public class BookingResponse {
     private BookingStatus bookingStatus;
     private BigDecimal totalPrice;
     private OffsetDateTime createdAt;
-    private OffsetDateTime bookedAt;
     private List<TicketResponse> tickets;
 }
