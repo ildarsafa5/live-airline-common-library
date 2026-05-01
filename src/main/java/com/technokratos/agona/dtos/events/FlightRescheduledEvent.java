@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.experimental.SuperBuilder;
 
 import java.time.Instant;
+import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Data
@@ -13,9 +14,9 @@ public class FlightRescheduledEvent extends EmailEvent {
     private String flightNumber;
     private String departureCity;
     private String arrivalCity;
-    private Instant oldDepartureTime;
-    private Instant newDepartureTime;
-    private Instant oldArrivalTime;
-    private Instant newArrivalTime;
+    private OffsetDateTime oldDepartureTime;
+    private OffsetDateTime newDepartureTime;
+    private OffsetDateTime oldArrivalTime;
+    private OffsetDateTime newArrivalTime;
     private Instant rescheduledAt;
 }
