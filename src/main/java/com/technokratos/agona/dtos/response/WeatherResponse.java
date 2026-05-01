@@ -1,11 +1,14 @@
 package com.technokratos.agona.dtos.response;
 
+import java.time.Instant;
+
 public class WeatherResponse {
 
     private Double temp;
     private Double feelslike;
     private Double pressure;
     private String conditions;
+    private Instant updatedAt;
 
 
     public Double getTemp() {
@@ -38,5 +41,13 @@ public class WeatherResponse {
 
     public void setPressure(Double pressure) {
         this.pressure = pressure;
+    }
+
+    public Instant getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Instant updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
