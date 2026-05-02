@@ -11,7 +11,9 @@ import java.time.OffsetDateTime;
 public class FlightInfo {
     private String flightNumber;
     private String departureCity;
+    private String departureAirportCode;
     private String arrivalCity;
+    private String arrivalAirportCode;
     private OffsetDateTime departureTime;
     private OffsetDateTime arrivalTime;
 
