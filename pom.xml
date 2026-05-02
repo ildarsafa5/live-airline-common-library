@@ -6,7 +6,7 @@
 
     <groupId>com.technokratos.agona</groupId>
     <artifactId>live-airline-common-library</artifactId>
-    <version>1.1.41</version>
+    <version>1.1.42</version>
 
     <distributionManagement>
         <repository>
@@ -35,6 +35,23 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -42,6 +59,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-boot.version>3.5.9</spring-boot.version>
+        <jwt.version>0.12.6</jwt.version>
         <lombok.version>1.18.36</lombok.version>
     </properties>
 
