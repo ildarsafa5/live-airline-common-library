@@ -1,5 +1,6 @@
 package com.technokratos.agona.dtos.events;
 
+import com.technokratos.agona.enums.OrderType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,7 +12,8 @@ import java.util.UUID;
 @Builder
 public class PaymentSucceededEvent {
     private UUID paymentId;
-    private UUID bookingId;
+    private UUID orderId;
+    private OrderType orderType;
     private BigDecimal amount;
     private Instant paidAt;
 }
