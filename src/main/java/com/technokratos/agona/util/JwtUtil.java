@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public class JwtUtil {
 
-    public Claims parseJwtToken(String jwtToken,SecretKey secretKey) {
+    private static Claims parseJwtToken(String jwtToken,SecretKey secretKey) {
         return Jwts.parser()
                 .verifyWith(secretKey)
                 .build()
@@ -19,7 +19,7 @@ public class JwtUtil {
                 .getPayload();
     }
 
-    public void validateToken(String jwtToken,SecretKey secretKey) {
+    public static void validateToken(String jwtToken,SecretKey secretKey) {
         try {
             Claims claims = parseJwtToken(jwtToken,secretKey);
             if (claims.getExpiration().before(new Date())) {
@@ -30,7 +30,7 @@ public class JwtUtil {
         }
     }
 
-    public AccountResponse extractUser(String jwtToken, SecretKey secretKey) {
+    public static AccountResponse extractUser(String jwtToken, SecretKey secretKey) {
         Claims claims = parseJwtToken(jwtToken,secretKey);
         AccountResponse accountResponse = new AccountResponse();
         accountResponse.setAccountId(UUID.fromString(claims.getSubject()));
