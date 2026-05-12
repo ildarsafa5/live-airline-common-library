@@ -19,12 +19,13 @@ public class JwtUtil {
                 .getPayload();
     }
 
-    public static void validateToken(String jwtToken,SecretKey secretKey) {
+    public static Claims validateToken(String jwtToken,SecretKey secretKey) {
         try {
             Claims claims = parseJwtToken(jwtToken,secretKey);
             if (claims.getExpiration().before(new Date())) {
                 throw new InvalidAccessTokenException("Token is expired");
             }
+            return claims;
         } catch (Exception e) {
             throw new InvalidAccessTokenException(e.getMessage());
         }
