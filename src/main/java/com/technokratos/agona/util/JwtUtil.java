@@ -6,10 +6,24 @@ import com.technokratos.agona.exceptions.InvalidAccessTokenException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import javax.crypto.SecretKey;
+import java.time.Instant;
 import java.util.Date;
 import java.util.UUID;
 
 public class JwtUtil {
+
+    public String generateServiceToken(String issuer,SecretKey secretKey) {
+        Instant now = Instant.now();
+        Date issuedAt = Date.from(now);
+        Date expiration = Date.from(now.plusMillis(60000));
+
+        return Jwts.builder()
+                .issuer(issuer)
+                .issuedAt(issuedAt)
+                .expiration(expiration)
+                .signWith(secretKey, Jwts.SIG.HS256)
+                .compact();
+    }
 
     private static Claims parseJwtToken(String jwtToken,SecretKey secretKey) {
         return Jwts.parser()
