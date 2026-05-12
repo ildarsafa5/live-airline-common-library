@@ -34,6 +34,7 @@ public class JwtUtil {
         Claims claims = parseJwtToken(jwtToken,secretKey);
         AccountResponse accountResponse = new AccountResponse();
         accountResponse.setAccountId(UUID.fromString(claims.getSubject()));
+        accountResponse.setEmail(claims.get("email", String.class));
         accountResponse.setRole(Role.valueOf(claims.get("role", String.class)));
         return accountResponse;
     }
