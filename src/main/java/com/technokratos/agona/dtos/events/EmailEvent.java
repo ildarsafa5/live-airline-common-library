@@ -5,6 +5,6 @@ import lombok.experimental.SuperBuilder;
 
 @Data
 @SuperBuilder
-public abstract class EmailEvent {
+public abstract class EmailEvent extends BasicEvent {
     private String email;
 }
