@@ -12,7 +12,6 @@ import java.time.LocalDate;
 
 
 public class ClientRequest {
-    @NotNull
     @UUID
     private String accountId;
     @NotBlank
