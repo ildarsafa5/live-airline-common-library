@@ -1,10 +1,10 @@
 package com.technokratos.agona.dtos.events;
 
-import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.SuperBuilder;
 
 @Data
-@Builder
+@SuperBuilder
 public class AirportCreatedEvent extends BasicEvent {
     private String city;
 }
