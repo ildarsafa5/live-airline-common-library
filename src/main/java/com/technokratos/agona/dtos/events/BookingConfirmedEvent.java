@@ -1,6 +1,8 @@
 package com.technokratos.agona.dtos.events;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
@@ -9,6 +11,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @SuperBuilder
 public class BookingConfirmedEvent extends EmailEvent {
     private UUID bookingId;

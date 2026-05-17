@@ -1,9 +1,13 @@
 package com.technokratos.agona.dtos.events;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.util.UUID;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @SuperBuilder(toBuilder = true)
 public class BasicEvent {
     private UUID messageId;
