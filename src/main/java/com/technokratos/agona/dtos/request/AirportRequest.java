@@ -9,7 +9,7 @@ import lombok.Data;
 public class AirportRequest {
 
     @NotBlank
-    @Pattern(regexp = "^[A-Z]{3}$")
+    @Pattern(regexp = "^[A-Z]{3}$", message = "Код аэропорта должен содержать 3 заглавные латинские буквы (SVO, KZN...")
     private String code;
 
     @NotBlank
