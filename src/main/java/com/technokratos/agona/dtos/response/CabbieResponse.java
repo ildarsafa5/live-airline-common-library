@@ -9,6 +9,15 @@ public class CabbieResponse {
     private String middleName;
     private String phone;
     private String city;
+    private CarResponse carResponse;
+
+    public CarResponse getCarResponse() {
+        return carResponse;
+    }
+
+    public void setCarResponse(CarResponse carResponse) {
+        this.carResponse = carResponse;
+    }
 
     public UUID getAccountId() {
         return accountId;
