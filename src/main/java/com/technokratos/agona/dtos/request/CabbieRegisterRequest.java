@@ -1,7 +1,9 @@
 package com.technokratos.agona.dtos.request;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.validation.constraints.*;
+
+import java.math.BigDecimal;
 
 public class CabbieRegisterRequest extends RegisterRequest {
 
@@ -21,6 +23,19 @@ public class CabbieRegisterRequest extends RegisterRequest {
     @Pattern(regexp = "^[А-ЯЁ][а-яё]{1,49}$",
             message = "Название города должно начинаться с заглавной буквы, содержать только русские буквы и быть не длиннее 50 символов")
     private String city;
+    @NotNull(message = "Цена обязательна")
+    @DecimalMin(value = "100.00", message = "Цена должна быть больше 100")
+    @DecimalMax(value = "5999.99", message = "Цена слишком большая")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private BigDecimal price;
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
 
     public String getLastName() {
 
