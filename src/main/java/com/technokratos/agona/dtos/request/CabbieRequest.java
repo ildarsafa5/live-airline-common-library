@@ -2,16 +2,17 @@ package com.technokratos.agona.dtos.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.UUID;
 
-public class CabbieRegisterRequest extends RegisterRequest {
-
+public class CabbieRequest {
+    @UUID
+    private String accountId;
     @NotBlank
     @Pattern(regexp = "^[А-ЯЁ][а-яё]*$", message = "Должно содержать только русские буквы, первая буква заглавная")
     private String lastName;
     @NotBlank
     @Pattern(regexp = "^[А-ЯЁ][а-яё]*$", message = "Должно содержать только русские буквы, первая буква заглавная")
     private String firstName;
-    @NotBlank
     @Pattern(regexp = "^[А-ЯЁ][а-яё]*$", message = "Должно содержать только русские буквы, первая буква заглавная")
     private String middleName;
     @NotBlank
@@ -22,8 +23,15 @@ public class CabbieRegisterRequest extends RegisterRequest {
             message = "Название города должно начинаться с заглавной буквы, содержать только русские буквы и быть не длиннее 50 символов")
     private String city;
 
-    public String getLastName() {
+    public String getAccountId() {
+        return accountId;
+    }
 
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
+    }
+
+    public String getLastName() {
         return lastName;
     }
 
@@ -47,19 +55,19 @@ public class CabbieRegisterRequest extends RegisterRequest {
         this.middleName = middleName;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getPhone() {
         return phone;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }
