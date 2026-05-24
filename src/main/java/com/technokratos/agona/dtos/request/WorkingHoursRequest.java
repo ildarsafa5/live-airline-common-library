@@ -1,13 +1,17 @@
 package com.technokratos.agona.dtos.request;
 
 import com.technokratos.agona.enums.Day;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalTime;
 
 public class WorkingHoursRequest {
 
+    @NotNull
     private Day dayOfWeek;
+    @NotNull
     private LocalTime startTime;
+    @NotNull
     private LocalTime endTime;
 
     public LocalTime getStartTime() {
