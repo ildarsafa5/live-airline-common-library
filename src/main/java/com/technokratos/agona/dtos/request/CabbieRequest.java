@@ -27,7 +27,6 @@ public class CabbieRequest {
     @NotNull(message = "Цена обязательна")
     @DecimalMin(value = "100.00", message = "Цена должна быть больше 100")
     @DecimalMax(value = "5999.99", message = "Цена слишком большая")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private BigDecimal price;
 
     public BigDecimal getPrice() {
