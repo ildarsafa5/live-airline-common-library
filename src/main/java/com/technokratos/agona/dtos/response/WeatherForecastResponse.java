@@ -10,4 +10,28 @@ public class WeatherForecastResponse {
 
     @JsonProperty("days")
     private List<DailySummaryResponse> days;
+
+    public String getResolvedAddress() {
+        return resolvedAddress;
+    }
+
+    public void setResolvedAddress(String resolvedAddress) {
+        this.resolvedAddress = resolvedAddress;
+    }
+
+    public String getTimezone() {
+        return timezone;
+    }
+
+    public void setTimezone(String timezone) {
+        this.timezone = timezone;
+    }
+
+    public List<DailySummaryResponse> getDays() {
+        return days;
+    }
+
+    public void setDays(List<DailySummaryResponse> days) {
+        this.days = days;
+    }
 }
