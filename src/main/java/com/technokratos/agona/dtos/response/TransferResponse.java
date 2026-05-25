@@ -3,14 +3,18 @@ package com.technokratos.agona.dtos.response;
 import com.technokratos.agona.enums.CarClass;
 import com.technokratos.agona.enums.TransferDirection;
 import com.technokratos.agona.enums.TransferStatus;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class TransferResponse {
     private UUID id;
